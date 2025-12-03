@@ -1,16 +1,17 @@
 # SLALOM Game | inspired by IronHack's Race Car Lab
 
-![FuerLogo](/assets/images/joker-cartoon.jpg)
+<img src="/assets/images/joker-cartoon.jpg" width="50px" alt="joker-logo">
 
 <details>
   <summary>
    <h2>IronHack's Scope</h2>
   </summary>
-- Practice and consolidate what we've learnt during these 3 first weeks.
-- Create a simple 2d game using HTML, CSS, JavaScript, and DOM manipulation.
-- Learn by failing
-- Bring our personal insight into our projects
-- Advance our technical skills in HTML, CSS, JS.
+  - Practice and consolidate what we've learnt during these 3 first weeks.
+  - Practice and consolidate what we've learnt during these 3 first weeks.
+  - Create a simple 2d game using HTML, CSS, JavaScript, and DOM manipulation.
+  - Learn by failing
+  - Bring our personal insight into our projects
+  - Advance our technical skills in HTML, CSS, JS.
   <br>
   <hr>
 </details>
