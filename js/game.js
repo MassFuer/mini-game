@@ -11,10 +11,10 @@ class Game {
     this.highScoreContainer = document.getElementById("high-scores-ol");
     this.player = new Player(
       this.gameScreen,
-      275,
-      400,
-      130,
-      240,
+      200,
+      500,
+      100,
+      180,
       this.gameMode
     );
     this.height = 600;
