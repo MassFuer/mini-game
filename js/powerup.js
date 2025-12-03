@@ -1,7 +1,7 @@
 class PowerUp {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.possibleLeftPositions = [85, 285];
+    this.possibleLeftPositions = [85, 185, 285];
     this.left =
       this.possibleLeftPositions[
         Math.floor(Math.random() * this.possibleLeftPositions.length)

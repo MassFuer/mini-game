@@ -240,25 +240,6 @@ main {
   border-radius: 8px;
   height: fit-content; /* to fit the content height */
 }
-
-#sound-toggle {
-  font-family: "Press Start 2P", cursive;
-  margin-top: 20px;
-  font-size: 16px;
-  background-color: #870007;
-  color: lightgray;
-  padding: 10px;
-  border: 3px solid darkgoldenrod;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#sound-toggle:hover {
-  background-color: #c20010;
-  transform: scale(1.05);
-}
-
 #game-screen {
   display: none;
   align-content: center;

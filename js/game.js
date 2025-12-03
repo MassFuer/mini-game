@@ -19,7 +19,10 @@ class Game {
     );
     this.height = 600;
     this.width = 500;
-    this.obstacles = [new Obstacle(this.gameScreen, this.gameMode)];
+    this.baseSpeed = 3; // base speed for obstacles
+    this.obstacles = [
+      new Obstacle(this.gameScreen, this.gameMode, this.baseSpeed),
+    ];
     this.score = 0;
     this.lives = 3;
     this.gameIsOver = false;
@@ -31,7 +34,10 @@ class Game {
     this.powerUps = [];
     // the score element from the HTML
     this.scoreElement = document.getElementById("score");
+    // lives element from HTML
     this.livesElement = document.getElementById("lives");
+    // speed element from HTML
+    this.speedElement = document.getElementById("speed");
 
     // counter to keep track of the frames
     this.frames = 0;
@@ -52,6 +58,15 @@ class Game {
     this.wassupGameOver = new Audio("assets/audio/wassup-2.wav");
     this.wassupGameOver.volume = 0.1;
   }
+
+  // implementing difficulty progression
+  // calculate obstacle speed based on score
+  getObstacleSpeed() {
+    // speed increases by 1 every 5 points
+    const speedIncrease = Math.floor(this.score / 5);
+    return this.baseSpeed + speedIncrease;
+  }
+
   start() {
     this.gameScreen.style.height = `${this.height}px`;
     this.gameScreen.style.width = `${this.width}px`;
@@ -118,6 +133,8 @@ class Game {
         // Increase the score by 1
         this.score++;
         this.scoreElement.innerText = this.score;
+        // Update speed display
+        this.speedElement.innerText = this.getObstacleSpeed();
       }
 
       // Check for collisions with projectiles
@@ -142,6 +159,8 @@ class Game {
           //add one point to the score
           this.score++;
           this.scoreElement.innerText = this.score;
+          // update speed display
+          this.speedElement.innerText = this.getObstacleSpeed().toFixed(1);
         } else if (currentProjectile.top < 0) {
           // Remove projectile if it goes off-screen (top)
           currentProjectile.element.remove();
@@ -192,7 +211,10 @@ class Game {
     // Create a new obstacle based on a random probability
     // when there is no other obstacles on the screen
     if (Math.random() > 0.98 && this.obstacles.length < 1) {
-      this.obstacles.push(new Obstacle(this.gameScreen, this.gameMode));
+      const currentSpeed = this.getObstacleSpeed();
+      this.obstacles.push(
+        new Obstacle(this.gameScreen, this.gameMode, currentSpeed)
+      );
     }
 
     // Create a new power-up based on a random probability (rare)

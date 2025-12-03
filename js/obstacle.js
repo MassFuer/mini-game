@@ -1,7 +1,8 @@
 class Obstacle {
-  constructor(gameScreen, gameMode) {
+  constructor(gameScreen, gameMode, speed = 3) {
     this.gameScreen = gameScreen;
     this.gameMode = gameMode;
+    this.speed = speed;
     this.possibleLeftPositions = [85, 285];
     this.left =
       this.possibleLeftPositions[
@@ -44,7 +45,7 @@ class Obstacle {
   }
 
   move() {
-    this.top += 3;
+    this.top += this.speed;
     this.updatePosition();
   }
   updatePosition() {
