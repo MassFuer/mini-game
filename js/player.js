@@ -14,9 +14,9 @@ class Player {
 
     // Set player image based on game mode
     if (this.gameMode === "kids") {
-      this.element.src = "/assets/images/tchoupi.png";
+      this.element.src = "assets/images/tchoupi.png";
     } else {
-      this.element.src = "/assets/images/joker-gun.png";
+      this.element.src = "assets/images/joker-gun.png";
     }
 
     // setting the style of our car

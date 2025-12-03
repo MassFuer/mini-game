@@ -17,14 +17,14 @@ class Obstacle {
 
     this.randomObstacleIndex = Math.floor(Math.random() * 3);
     this.obstacleImagesKids = [
-      "/assets/images/ptitloup.png",
-      "/assets/images/peppa-pig.png",
-      "/assets/images/pob.png",
+      "assets/images/ptitloup.png",
+      "assets/images/peppa-pig.png",
+      "assets/images/pob.png",
     ];
     this.obstacleImagesAdults = [
-      "/assets/images/batman.png",
-      "/assets/images/robin.png",
-      "/assets/images/batgirl.png",
+      "assets/images/batman.png",
+      "assets/images/robin.png",
+      "assets/images/batgirl.png",
     ];
     // Set obstacle image based on game mode
     if (this.gameMode === "kids") {

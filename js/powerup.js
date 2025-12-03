@@ -16,8 +16,8 @@ class PowerUp {
 
     this.randomPowerUpIndex = Math.floor(Math.random() * 2);
     this.powerUpImages = [
-      "/assets/images/mush.png",
-      "/assets/images/peppa-pig.png",
+      "assets/images/mush.png",
+      "assets/images/heart.png",
     ];
     // Set power-up image
     this.element.src = this.powerUpImages[this.randomPowerUpIndex];

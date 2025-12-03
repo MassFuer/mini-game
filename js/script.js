@@ -22,7 +22,7 @@ window.onload = function () {
     document.body.classList.toggle("dark-mode-toggle");
   });
   // Master sound button functionality
-  const backgroundMusic = new Audio("/assets/audio/4am.mp3");
+  const backgroundMusic = new Audio("assets/audio/4am.mp3");
   // backgroundMusic.play();
   backgroundMusic.loop = true;
   backgroundMusic.volume = 0.5;
@@ -58,7 +58,7 @@ window.onload = function () {
   // Mode selection event listeners
   kidsButton.addEventListener("click", function () {
     currentGameMode = "kids";
-    introLogo.src = "/assets/images/tchoupi.png";
+    introLogo.src = "assets/images/tchoupi.png";
     document.title = "Tchoupi : Slalom Edition";
     gameTitle.innerHTML =
       'TCHOUPI SLALOM<span class="title-subtitle">KIDS EDITION</span>';
@@ -69,7 +69,7 @@ window.onload = function () {
 
   adultsButton.addEventListener("click", () => {
     currentGameMode = "adults";
-    introLogo.src = "/assets/images/joker-cartoon.jpg";
+    introLogo.src = "assets/images/joker-cartoon.jpg";
     document.title = "Joker : Slalom Edition";
     document.querySelector(".game-title").innerHTML =
       'JOKER SLALOM<span class="title-subtitle">ARMED EDITION</span>';

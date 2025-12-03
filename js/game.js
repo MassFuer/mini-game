@@ -37,16 +37,16 @@ class Game {
     this.frames = 0;
 
     // adding sounds
-    this.boom = new Audio("/assets/audio/boom.wav");
+    this.boom = new Audio("assets/audio/boom.wav");
     this.boom.volume = 0.1;
 
-    this.fire = new Audio("/assets/audio/fire.wav");
+    this.fire = new Audio("assets/audio/fire.wav");
     this.fire.volume = 0.1;
 
-    this.collision = new Audio("/assets/audio/spin.wav");
+    this.collision = new Audio("assets/audio/spin.wav");
     this.collision.volume = 0.1;
 
-    this.powerUpSound = new Audio("/assets/audio/1up.wav");
+    this.powerUpSound = new Audio("assets/audio/1up.wav");
     this.powerUpSound.volume = 0.1;
   }
   start() {
@@ -58,9 +58,9 @@ class Game {
     // Set background based on mode
     if (this.gameMode === "kids") {
       this.gameScreen.style.backgroundImage =
-        'url("/assets/images/dark-notebook.png")';
+        'url("assets/images/dark-notebook.png")';
     } else {
-      this.gameScreen.style.backgroundImage = 'url("/assets/images/milky.jpg")';
+      this.gameScreen.style.backgroundImage = 'url("assets/images/milky.jpg")';
     }
     this.gameIntervalId = setInterval(() => {
       this.gameLoop();
@@ -207,9 +207,9 @@ class Game {
 
     // Set the end screen image based on game mode
     if (this.gameMode === "kids") {
-      this.endScreenImage.src = "/assets/images/ouioui.png";
+      this.endScreenImage.src = "assets/images/ouioui.png";
     } else {
-      this.endScreenImage.src = "/assets/images/mask-hammer.jpg";
+      this.endScreenImage.src = "assets/images/mask-hammer.jpg";
     }
 
     // Hide game screen

@@ -7,7 +7,7 @@ class Projectile {
     this.height = 40;
 
     this.element = document.createElement("img");
-    this.element.src = "/assets/images/projectile.png";
+    this.element.src = "assets/images/projectile.png";
     this.element.style.position = "absolute";
     //these set the size of our car
     this.element.style.height = `${this.height}px`;
