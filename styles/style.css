@@ -22,6 +22,9 @@ body {
   text-align: center;
   background-color: rgb(48, 4, 40);
 }
+.dark-mode-toggle {
+  background-color: #14274b;
+}
 
 main {
   width: 100%;
@@ -32,11 +35,14 @@ main {
   justify-content: center;
 }
 
-/* Button master sound */
-#master-sound {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* Div controls (master sound and dark mode) */
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+#controls button {
   font-family: "Press Start 2P", cursive;
   font-size: 14px;
   background-color: #14274b;
@@ -47,7 +53,7 @@ main {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-#master-sound:hover {
+#controls button:hover {
   background-color: #1e407c;
   border: 3px solid rgb(14, 107, 21);
   transform: scale(1.05);
@@ -351,5 +357,25 @@ main {
   }
   100% {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+/* Pulse animation for power-up collection */
+.pulse {
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: lightgray;
+  }
+  50% {
+    transform: scale(1.9);
+    color: goldenrod;
+  }
+  100% {
+    transform: scale(1);
+    color: lightgray;
   }
 }

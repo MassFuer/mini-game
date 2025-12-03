@@ -1,7 +1,6 @@
 class PowerUp {
-  constructor(gameScreen, gameMode) {
+  constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.gameMode = gameMode;
     this.possibleLeftPositions = [85, 285];
     this.left =
       this.possibleLeftPositions[

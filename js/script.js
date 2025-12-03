@@ -15,7 +15,12 @@ window.onload = function () {
   const gameTitle = document.querySelector(".game-title");
   const highScoresListIntro = document.getElementById("high-scores-list-intro");
   const masterSoundButton = document.getElementById("master-sound");
+  const darkModeButton = document.getElementById("dark-mode-toggle");
 
+  // Dark mode toggle functionality
+  darkModeButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode-toggle");
+  });
   // Master sound button functionality
   const backgroundMusic = new Audio("/assets/audio/4am.mp3");
   // backgroundMusic.play();
@@ -101,11 +106,13 @@ window.onload = function () {
       game.boom.volume = 0.1;
       game.fire.volume = 0.1;
       game.collision.volume = 0.1;
+      game.powerUpSound.volume = 0.2;
     } else {
       soundToggle.innerText = "🔇 Sound OFF";
       game.boom.volume = 0;
       game.fire.volume = 0;
       game.collision.volume = 0;
+      game.powerUpSound.volume = 0;
     }
   });
 

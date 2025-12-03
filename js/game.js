@@ -27,6 +27,8 @@ class Game {
     this.gameLoopFrequency = Math.floor(1000 / 60); // 60 frames per second
     // adding projectile feature
     this.projectiles = [];
+    // adding power-up feature
+    this.powerUps = [];
     // the score element from the HTML
     this.scoreElement = document.getElementById("score");
     this.livesElement = document.getElementById("lives");
@@ -43,6 +45,9 @@ class Game {
 
     this.collision = new Audio("/assets/audio/spin.wav");
     this.collision.volume = 0.1;
+
+    this.powerUpSound = new Audio("/assets/audio/1up.wav");
+    this.powerUpSound.volume = 0.1;
   }
   start() {
     this.gameScreen.style.height = `${this.height}px`;
@@ -147,10 +152,49 @@ class Game {
       this.endGame();
     }
 
+    // Power-ups logic
+    for (let i = 0; i < this.powerUps.length; i++) {
+      const powerUp = this.powerUps[i];
+      powerUp.move();
+
+      // If the player collects the power-up
+      if (this.player.didCollide(powerUp)) {
+        // Play power-up sound
+        this.powerUpSound.play();
+        // Remove the power-up element from the DOM
+        powerUp.element.remove();
+        // Remove power-up object from the array
+        this.powerUps.splice(i, 1);
+        i--;
+        // Add 1 life
+        this.lives++;
+        this.livesElement.innerText = this.lives;
+
+        // Visual feedback added - pulse the lives counter
+        this.livesElement.classList.add("pulse");
+        setTimeout(() => {
+          this.livesElement.classList.remove("pulse");
+        }, 500);
+      }
+      // If the power-up is off the screen (at the bottom)
+      else if (powerUp.top > this.height) {
+        // Remove the power-up from the DOM
+        powerUp.element.remove();
+        // Remove power-up object from the array
+        this.powerUps.splice(i, 1);
+        i--;
+      }
+    }
+
     // Create a new obstacle based on a random probability
     // when there is no other obstacles on the screen
     if (Math.random() > 0.98 && this.obstacles.length < 1) {
       this.obstacles.push(new Obstacle(this.gameScreen, this.gameMode));
+    }
+
+    // Create a new power-up based on a random probability (rare)
+    if (Math.random() > 0.995 && this.powerUps.length < 1) {
+      this.powerUps.push(new PowerUp(this.gameScreen));
     }
   }
 

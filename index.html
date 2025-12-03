@@ -9,8 +9,10 @@
   </head>
   <body>
     <main>
-      <button id="master-sound">What a music !</button>
-      <button id="dark-mode">🌙</button>
+      <div id="controls">
+        <button id="master-sound">What a music !</button>
+        <button id="dark-mode-toggle">🌙</button>
+      </div>
       <!-- #game-intro is initially shown on the game start screen -->
       <div id="game-intro">
         <h1 class="game-title">
@@ -58,9 +60,9 @@
           <span>Use space, left (←) and</span>
           <span>right (→) arrows keys</span>
           <img
-          src="/assets/images/space_arrows.png"
-          alt=""
-          class="arrows-img"
+            src="/assets/images/space_arrows.png"
+            alt=""
+            class="arrows-img"
           />
           <button id="start-button">Start Game</button>
         </div>
@@ -85,15 +87,15 @@
           alt=""
           class="logo-img"
           id="game-end-img"
-          />
-          <div id="high-scores">
-            
-            <h3>Top Three Scores :</h3>
+        />
+        <div id="high-scores">
+          <h3>Top Three Scores :</h3>
           <ol id="high-scores-ol"></ol>
         </div>
         <button id="restart-button">Restart</button>
       </div>
     </main>
+    <script type="text/javascript" src="js/powerup.js"></script>
     <script type="text/javascript" src="js/projectile.js"></script>
     <script type="text/javascript" src="js/obstacle.js"></script>
     <script type="text/javascript" src="js/player.js"></script>
