@@ -1,18 +1,26 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# SLALOM Game | inspired by IronHack's Race Car Lab
 
-# LAB | DOM Race Car
-
-
-![Island Racer Logo](images/logo.png)
+![FuerLogo](/assets/images/joker-cartoon.jpg)
 
 <details>
   <summary>
-   <h2>Learning Goals</h2>
+   <h2>IronHack's Scope</h2>
   </summary>
-  Upon completion of this exercise, you will be able to:
+- Practice and consolidate what we've learnt during these 3 first weeks.
+- Create a simple 2d game using HTML, CSS, JavaScript, and DOM manipulation.
+- Learn by failing
+- Bring our personal insight into our projects
+- Advance our technical skills in HTML, CSS, JS.
+  <br>
+  <hr>
+</details>
 
-- Create a simple 2d game using HTML, CSS, JavaScript, and DOM.
-- Implement game logic and UI, including start screen, game screen, and end-game screen.
+## Requirements from IronHack
+### Instructions
+-Implement simple game logic and UI, including start screen, game screen, and end-game screen.
+- Use best practices learnt during lessons
+- Single page / Single HTML
+- At least 3 stats (splash, game, gameover)
 - Use classes and OOP to organize data, functionality, and game elements.
 - Use `setInterval()` to create a game loop that continuously updates the game elements.
 - Handle user input and events to control game elements.
@@ -20,58 +28,25 @@
 - Create and manipulate elements in the DOM, including displaying and hiding elements.
 - Change the style of the game elements using DOM and CSS
 
-  <br>
-
-  <hr>
-
-</details>
+### Technologies
+- Basic HTML, CSS, JS
+- JavaScript ( DOM, Basic JS, Classes)
+- Win/Lose Logic
+- Version control tool (Git/Github)
+- Bonus: Local Storage, Audio.
 
 ## Introduction
+In this exercise, we will create a **Slalom : Armed Edition** game using DOM manipulation, classes, and object-oriented programming (OOP).
 
-We are ready to start making 2d games using the knowledge we have gained so far in HTML, CSS, and JavaScript. In this exercise, we will create a **Race Car** game using DOM manipulation, classes, and object-oriented programming (OOP).
+### Getting Started
 
-The goal of this exercise is to help you practice for the Module 1 project.
+The div `game-intro`, `game-container`, and `game-end` represent the screens of the game.
 
-This exercise is divided into two parts: a teacher-led demo and a self-guided exercise.
+ the `styles/style.css` 
 
-During the first part, the teacher will do a demo and walk you through the creation of the game, allowing you to ask questions and observe the process. The demo will help you understand how to implement the game.
+ `script.js` - This file contains code that handles the game's start button. Please open it and take a look at how the event listener is set up.
 
-In the second part, you and your classmates will have the opportunity to create the game on your own. You will be provided with the finished game as a reference guide, and the teacher will be available to answer any questions you may have.
-
-<!-- In the second part, you and your classmates will have to create the game on your own. The code of the finished game is already provided in the exercise as a reference guide, and the teacher will be available to answer any questions you may have. -->
-
-## Requirements
-
-- Fork this repo
-- Clone this repo
-
-## Submission
-
-- Upon completion, run the following commands:
-
-  ```
-  git add .
-  git commit -m "done"
-  git push origin master
-  ```
-
-- Create Pull Request so your TAs can check up your work.
-
-## Instructions
-
-### Iteration 0: Getting Started
-
-The first thing we will do is get familiar with the starter code provided for the exercise:
-
-1. Open the `index.html` file and take a look at the HTML structure of the game. The div `game-intro`, `game-container`, and `game-end` represent the screens of the game.
-
-2. Open the `styles/style.css` file and take a look at the CSS styles for the game. The styles are already provided, but you are free to make changes to the styles or animations to your liking during the exercise.
-
-3. The starter code includes a couple of JavaScript files that are located in the `js` folder:
-
-   - `script.js` - This file contains code that handles the game's start button. Please open it and take a look at how the event listener is set up.
-
-   - `game.js` - This is the file where we will define the `Game` class to represent the game's data (properties) and behaviors (methods). We will fill out this class as we progress through the exercise.
+ `game.js` - This is the file where we will define the `Game` class to represent the game's data (properties) and behaviors (methods). We will fill out this class as we progress through the exercise.
 
 <br>
 
@@ -87,7 +62,6 @@ In the next iteration, we will create the `Game` class and implement the functio
 
 ## Iteration 1: Create the Game
 
-In this iteration, you will create the `Game` class in the `js/game.js` file. This class will be responsible for managing the game data and behavior.
 
 1. The class `Game` is defined in the `js/game.js` file.
 
@@ -115,7 +89,7 @@ In this iteration, you will create the `Game` class in the `js/game.js` file. Th
 
    - `gameIntervalId` - a variable used to store the id of the interval running the game loop. We store and use this id to clear the interval once the game is over.
 
-   - `gameLoopFrecuency` - a number that indicates the interval in milliseconds at which the game loop will execute. A good value for most screens is `1000/60`, which equates to the the game being updated every ~17 millisecond, or about 60 times per second (60fps).
+   - `gameLoopFrequency` - a number that indicates the interval in milliseconds at which the game loop will execute. A good value for most screens is `1000/60`, which equates to the the game being updated every ~17 millisecond, or about 60 times per second (60fps).
 
       <br>
 
@@ -159,59 +133,6 @@ You can use the below example of the completed code as a reference:
 	<summary>See the code</summary>
 <br>
 
-```js
-class Game {
-  constructor() {
-    this.startScreen = document.getElementById("game-intro");
-    this.gameScreen = document.getElementById("game-screen");
-    this.gameEndScreen = document.getElementById("game-end");
-    this.player = null;
-    this.height = 600;
-    this.width = 500;
-    this.obstacles = [];
-    this.score = 0;
-    this.lives = 3;
-    this.gameIsOver = false;
-    this.gameIntervalId;
-    this.gameLoopFrequency = Math.round(1000/60); // 60fps
-  }
-
-  start() {
-    // Set the height and width of the game screen
-    this.gameScreen.style.height = `${this.height}px`;
-    this.gameScreen.style.width = `${this.width}px`;
-
-    // Hide the start screen
-    this.startScreen.style.display = "none";
-    
-    // Show the game screen
-    this.gameScreen.style.display = "block";
-
-    // Runs the gameLoop on a fequency of 60 times per second. Also stores the ID of the interval.
-    this.gameIntervalId = setInterval(() => {
-      this.gameLoop()
-    }, this.gameLoopFrequency)
-  }
-
-  gameLoop() {
-    console.log("in the game loop");
-    
-    this.update();
-
-    // If "gameIsOver" is set to "true" clear the interval to stop the loop
-    if (this.gameIsOver) {
-      clearInterval(this.gameIntervalId)
-    }
-  }
-
-  update() {
-    console.log("in the update");
-  }
-}
-```
-
-<br>
-
 </details>
 
 <br>
@@ -219,34 +140,6 @@ class Game {
 ## Iteration 2: Start the Game
 
 Check the provided code in the `js/script.js` file. When the **Start Game** button is clicked, inside the `startGame` function we should create a new instance of the `Game` class and start the game by invoking the `start()` method:
-
-<details>
-	<summary>See the code</summary>
-
-<br>
-
-```js
-// js/script.js
-
-window.onload = function () {
-  const startButton = document.getElementById("start-button");
-  const restartButton = document.getElementById("restart-button");
-  let game; // added
-
-  startButton.addEventListener("click", function () {
-    startGame();
-  });
-
-  function startGame() {
-    console.log("start game");
-    game = new Game(); // added
-
-    game.start(); // added
-  }
-};
-```
-
-<br>
 
 </details>
 
@@ -331,152 +224,16 @@ You can use the below example of the completed code as a reference:
 
 <br>
 
-```js
-class Player {
-  constructor(gameScreen, left, top, width, height, imgSrc) {
-    this.gameScreen = gameScreen;
-    this.left = left;
-    this.top = top;
-    this.width = width;
-    this.height = height;
-    this.directionX = 0;
-    this.directionY = 0;
-    this.element = document.createElement("img");
-
-    this.element.src = imgSrc;
-    this.element.style.position = "absolute";
-    // Set up the default element's property values
-    this.element.style.width = `${width}px`;
-    this.element.style.height = `${height}px`;
-    this.element.style.left = `${left}px`;
-    this.element.style.top = `${top}px`;
-
-    this.gameScreen.appendChild(this.element);
-  }
-
-  move() {
-    // Update player's car position based on directionX and directionY
-    this.left += this.directionX;
-    this.top += this.directionY;
-
-    // Ensure the player's car stays within the game screen
-    // handles left hand side
-    if (this.left < 10) {
-      this.left = 10;
-    }
-
-    // handles top side
-    if (this.top < 10) {
-      this.top = 10;
-    }
-
-    // handles right hand side
-    if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
-      this.left = this.gameScreen.offsetWidth - this.width - 10;
-    }
-
-    // handles bottom side
-    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
-      this.top = this.gameScreen.offsetHeight - this.height - 10;
-    }
-
-    // Update the player's car position on the screen
-    this.updatePosition();
-  }
-
-  updatePosition() {
-    this.element.style.left = `${this.left}px`;
-    this.element.style.top = `${this.top}px`;
-  }
-
-  didCollide(obstacle) {
-    const playerRect = this.element.getBoundingClientRect();
-    const obstacleRect = obstacle.element.getBoundingClientRect();
-
-    if (
-      playerRect.left < obstacleRect.right &&
-      playerRect.right > obstacleRect.left &&
-      playerRect.top < obstacleRect.bottom &&
-      playerRect.bottom > obstacleRect.top
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-
-}
-```
-
-<br>
-
-</details>
-
-<br>
-
 ## Iteration 4: Add the Player to the Game
 
 1. As a reminder, we have already defined the `player` property of the `Game` class and set it to `null`. Now let's instantiate a new `Player` object and store it in the `player` property of the `Game`. 
 
-<details>
-	<summary>See the code</summary>
-
 <br>
 
-```js
-class Game {
-  constructor() {
-    // ...
-    this.player = new Player(
-      this.gameScreen,
-      200,
-      500,
-      100,
-      150,
-      "./images/car.png"
-    );
-    // ...
-  }
-
-  // ...
-}
-```
-
-<br>
-
-</details>
-
-<br>
-
-2. To continuously update the player's position during gameplay, add a call to the `player.move()` method within the `update()` method of the `Game` class.
+1. To continuously update the player's position during gameplay, add a call to the `player.move()` method within the `update()` method of the `Game` class.
 
 <details>
 	<summary>See the code</summary>
-
-<br>
-
-```js
-class Game {
-  // ...
-
-  update() {
-    this.player.move();
-  }
-}
-```
-
-<br>
-
-</details>
-
-<br>
-
-
-
-![island racer game - player car showing](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m1/lab-dom-race-car/lab-dom-race-car-player.png)
-
-
 
 <br>
 
@@ -597,51 +354,6 @@ In this iteration, we will create the `Obstacle` class, which will be used to cr
 
 You can use the below example of the completed code as a reference:
 
-<details>
-	<summary>See the code</summary>
-
-<br>
-
-```js
-class Obstacle {
-  constructor(gameScreen) {
-    this.gameScreen = gameScreen;
-    this.left = Math.floor(Math.random() * 300 + 70);
-    this.top = 0;
-    this.width = 100;
-    this.height = 150;
-    this.element = document.createElement("img");
-
-    this.element.src = "./images/redCar.png";
-    this.element.style.position = "absolute";
-    this.element.style.width = `${this.width}px`;
-    this.element.style.height = `${this.height}px`;
-    this.element.style.left = `${this.left}px`;
-    this.element.style.top = `${this.top}px`;
-
-    this.gameScreen.appendChild(this.element);
-  }
-
-  updatePosition() {
-    // Update the obstacle's position based on the properties left and top
-    this.element.style.left = `${this.left}px`;
-    this.element.style.top = `${this.top}px`;
-  }
-
-  move() {
-    // Move the obstacle down by 3px
-    this.top += 3;
-    // Update the obstacle's position on the screen
-    this.updatePosition();
-  }
-}
-```
-
-<br>
-
-</details>
-
-<br>
 
 ## Iteration 7: Handling Collisions
 
@@ -683,90 +395,11 @@ This method is responsible for updating the game state during each loop iteratio
 
 You can use the below example of the completed code as a reference:
 
-<details>
-	<summary>See the code</summary>
-
 <br>
-
-```js
-// js/game.js
-
-class Game {
-  // ...
-
-  update() {
-    this.player.move();
-
-    // Check for collision and if an obstacle is still on the screen
-    for (let i = 0; i < this.obstacles.length; i++) {
-      const obstacle = this.obstacles[i];
-      obstacle.move();
-
-      // If the player's car collides with an obstacle
-      if (this.player.didCollide(obstacle)) {
-        // Remove the obstacle element from the DOM
-        obstacle.element.remove();
-        // Remove obstacle object from the array
-        this.obstacles.splice(i, 1);
-        // Reduce player's lives by 1
-        this.lives--;
-        // Update the counter variable to account for the removed obstacle
-        i--;
-      } // If the obstacle is off the screen (at the bottom)
-      else if (obstacle.top > this.height) {
-        // Increase the score by 1
-        this.score++;
-        // Remove the obstacle from the DOM
-        obstacle.element.remove();
-        // Remove obstacle object from the array
-        this.obstacles.splice(i, 1);
-        // Update the counter variable to account for the removed obstacle
-        i--;
-      }
-    }
-
-    // If the lives are 0, end the game
-    if (this.lives === 0) {
-      this.endGame();
-    }
-
-    // Create a new obstacle based on a random probability
-    // when there is no other obstacles on the screen
-    if (Math.random() > 0.98 && this.obstacles.length < 1) {
-      this.obstacles.push(new Obstacle(this.gameScreen));
-    }
-  }
-
-  // Create a new method responsible for ending the game
-  endGame() {
-    this.player.element.remove();
-    this.obstacles.forEach(obstacle => obstacle.element.remove());
-
-    this.gameIsOver = true;
-
-    // Hide game screen
-    this.gameScreen.style.display = "none";
-    // Show end game screen
-    this.gameEndScreen.style.display = "block";
-  }
-
-  // ...
-}
-```
-
-<br>
-
-</details>
-
-<br>
-
-
 
 <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m1/lab-dom-race-car/lab-dom-race-car-start-game-obstacles.gif" width="600" style="display: block; margin: 0 auto" />
 
 <br>
-
-
 
 ## Iteration 8: End Game Screen
 
@@ -774,37 +407,6 @@ In this final iteration, we will implement the end game screen, shown to the use
 
 Check the code in the `js/script.js`. We will do this by adding a `click` event listener to the **Restart Game** button. The handler function for this listener should reload the page when the button is clicked. You can achieve this by using the [`location.reload()`](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) method.
 
-<br>
-
-You can refer to the example of the completed code below to guide you through this iteration:
-
-<details>
-	<summary>See the code</summary>
-
-<br>
-
-```js
-// js/script.js
-
-window.onload = function () {
-  // ...
-
-  // Add an event listener to the restart button
-  restartButton.addEventListener("click", function () {
-    // Call the restartGame function when the button is clicked
-    restartGame();
-  });
-
-  // The function that reloads the page to start a new game
-  function restartGame() {
-    location.reload();
-  }
-};
-```
-
-<br>
-
-</details>
 
 <br>
 
@@ -961,18 +563,3 @@ To make the game more competitive, add elements to shows the player's score and 
 
 You can find the complete solution code for the lab at:  [dom-race-car](https://github.com/ironhack-labs/lesson-code-dom-race-car).
 
-To clone the solution repository, run the following commands:
-
-```shell
-# clone the repo
-git clone https://github.com/ironhack-labs/lesson-code-dom-race-car.git
-
-# navigate to the cloned repo
-cd lesson-code-dom-race-car
-```
-
-
-
-<br>
-
-**Happy coding!** :heart:

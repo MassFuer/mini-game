@@ -52,7 +52,8 @@ class Game {
     this.gameStats.style.display = "flex"; // show the stats during the game
     // Set background based on mode
     if (this.gameMode === "kids") {
-      this.gameScreen.style.backgroundImage = 'url("/assets/images/notebook.jpg")';
+      this.gameScreen.style.backgroundImage =
+        'url("/assets/images/dark-notebook.png")';
     } else {
       this.gameScreen.style.backgroundImage = 'url("/assets/images/milky.jpg")';
     }
