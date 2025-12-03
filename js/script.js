@@ -20,6 +20,13 @@ window.onload = function () {
   // Dark mode toggle functionality
   darkModeButton.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode-toggle");
+
+    // Toggle between moon and sun based on dark mode state
+    if (document.body.classList.contains("dark-mode-toggle")) {
+      darkModeButton.innerText = "☀️";  // Sun when dark mode is ON
+    } else {
+      darkModeButton.innerText = "🌙";  // Moon when dark mode is OFF
+    }
   });
   // Master sound button functionality
   const backgroundMusic = new Audio("assets/audio/4am.mp3");
@@ -29,8 +36,10 @@ window.onload = function () {
   masterSoundButton.addEventListener("click", () => {
     if (backgroundMusic.paused) {
       backgroundMusic.play();
+      masterSoundButton.innerText = "🔇 Stop Music";
     } else {
       backgroundMusic.pause();
+      masterSoundButton.innerText = "🎵 Play Music";
     }
   });
 

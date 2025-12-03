@@ -48,6 +48,9 @@ class Game {
 
     this.powerUpSound = new Audio("assets/audio/1up.wav");
     this.powerUpSound.volume = 0.1;
+
+    this.wassupGameOver = new Audio("assets/audio/wassup-2.wav");
+    this.wassupGameOver.volume = 0.1;
   }
   start() {
     this.gameScreen.style.height = `${this.height}px`;
@@ -221,6 +224,7 @@ class Game {
   // Game over screen and displaying high scores
   gameOver() {
     console.log("Game is Over Man");
+    setTimeout(() => this.wassupGameOver.play(), 1000);
     this.gameScreen.style.display = "none";
     this.endScreen.style.display = "flex";
     this.gameStats.style.display = "none";
