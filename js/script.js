@@ -23,9 +23,9 @@ window.onload = function () {
 
     // Toggle between moon and sun based on dark mode state
     if (document.body.classList.contains("dark-mode-toggle")) {
-      darkModeButton.innerText = "☀️";  // Sun when dark mode is ON
+      darkModeButton.innerText = "☀️"; // Sun when dark mode is ON
     } else {
-      darkModeButton.innerText = "🌙";  // Moon when dark mode is OFF
+      darkModeButton.innerText = "🌙"; // Moon when dark mode is OFF
     }
   });
   // Master sound button functionality
@@ -70,7 +70,7 @@ window.onload = function () {
     introLogo.src = "assets/images/tchoupi.png";
     document.title = "Tchoupi : Slalom Edition";
     gameTitle.innerHTML =
-      'TCHOUPI SLALOM<span class="title-subtitle">KIDS EDITION</span>';
+      'TCHOUPI BANANAS<span class="title-subtitle">KIDS EDITION</span>';
     modeSelection.style.display = "none";
     gameRules.style.display = "flex";
     playerNameInput.focus();
@@ -149,13 +149,30 @@ window.onload = function () {
           game.gameScreen,
           //the left of the player plus half the player width minus half the projectile width
           game.player.left + 65 - 10,
-          game.player.top
+          game.player.top,
+          currentGameMode
         )
       );
       //calling the fire sound from the game class
       game.fire.play();
     }
   });
+
+  // add click event listener to fire projectiles
+  window.addEventListener("click", (event) => {
+    game.projectiles.push(
+      new Projectile(
+        game.gameScreen,
+        //the left of the player plus half the player width minus half the projectile width
+        game.player.left + 65 - 10,
+        game.player.top,
+        currentGameMode
+      )
+    );
+    //calling the fire sound from the game class
+    game.fire.play();
+  });
+
   window.addEventListener("keyup", (event) => {
     console.log("a key was pressed", event);
     if (event.code === "ArrowLeft") {

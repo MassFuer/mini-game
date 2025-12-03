@@ -1,13 +1,17 @@
 class Projectile {
-  constructor(gameScreen, posX, posY) {
+  constructor(gameScreen, posX, posY, gameMode = "adults") {
     this.gameScreen = gameScreen;
     this.left = posX;
     this.top = posY;
-    this.width = 20;
+    this.width = 25;
     this.height = 40;
-
+    this.gameMode = gameMode;
     this.element = document.createElement("img");
-    this.element.src = "assets/images/projectile.png";
+    if (this.gameMode === "kids") {
+      this.element.src = "assets/images/banana.png";
+    } else {
+      this.element.src = "assets/images/projectile.png";
+    }
     this.element.style.position = "absolute";
     //these set the size of our car
     this.element.style.height = `${this.height}px`;
