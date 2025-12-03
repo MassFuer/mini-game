@@ -1,0 +1,355 @@
+/* *********** Import Fonts *********** */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* *********** Global Styles *********** */
+
+/* *********** Reset CSS default *********** */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Setting the body styles */
+body {
+  font-family: "Press Start 2P", cursive;
+  color: lightgrey;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(48, 4, 40);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button master sound */
+#master-sound {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  background-color: #14274b;
+  color: lightgray;
+  padding: 10px;
+  border: 3px solid rgb(9, 70, 14);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#master-sound:hover {
+  background-color: #1e407c;
+  border: 3px solid rgb(14, 107, 21);
+  transform: scale(1.05);
+}
+
+/* Game Intro Style with title and subtitle, modes selection, hidden div and stats */
+#game-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px;
+}
+
+.game-intro p {
+  font-size: 18px;
+  /* font-family: "Verdana"; */
+}
+.game-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.title-subtitle {
+  display: block;
+  font-size: 20px;
+  color: darkgoldenrod;
+}
+
+/* Mode Selection Styles */
+#mode-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#mode-selection h2 {
+  font-size: 24px;
+  color: lightgreen;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.mode-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #870007;
+  border: 3px solid darkgoldenrod;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+  background-color: #c20010;
+  transform: scale(1.05);
+}
+
+.mode-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.mode-btn p {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+  font-family: "Orbitron", cursive;
+}
+
+.logo-img {
+  width: 250px;
+  margin: 10px auto;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
+}
+
+/* High scores panel - Game Intro */
+#high-scores-intro {
+  margin-top: 30px;
+  padding: 20px;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
+  background-color: #870007;
+  color: black;
+}
+#high-scores-intro:hover {
+  background-color: #1f1735;
+  color: lightgray;
+  transform: scale(1.02);
+}
+#high-scores-intro h3 {
+  font-size: 20px;
+  color: darkgoldenrod;
+  margin: 0 0 15px 0;
+}
+
+#high-scores-list-intro {
+  list-style-position: inside; /* put nubers inside the border */
+  padding: 0;
+  margin: 0;
+}
+
+#high-scores-list-intro li {
+  font-family: "Orbitron", cursive;
+  font-size: 16px;
+  color: lightgray;
+  margin: 8px 0;
+}
+
+/* Game rules */
+#game-rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
+}
+#game-rules h2 {
+  font-size: 20px;
+  color: rgb(147, 151, 147);
+}
+#start-button {
+  font-size: 18px;
+  font-family: "Press Start 2P", cursive;
+  background-color: #870007;
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+#start-button:hover {
+  background-color: #c20010;
+  transform: scale(1.05);
+}
+#player-name {
+  font-size: 16px;
+  padding: 10px;
+  background-color: lightgray;
+  border: 1px solid darkgoldenrod;
+  border-radius: 8px;
+}
+
+#intro-logo {
+  width: 250px;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
+}
+
+.arrows-img {
+  width: 150px;
+}
+
+#game-container {
+  display: flex;
+  width: 100%;
+  padding: 20px 0px;
+  justify-content: center;
+  gap: 20px;
+}
+
+#game-stats {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 3px solid darkgoldenrod;
+  padding: 10px;
+  border-radius: 8px;
+  height: fit-content; /* to fit the content height */
+}
+
+#sound-toggle {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #870007;
+  color: lightgray;
+  padding: 10px;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#sound-toggle:hover {
+  background-color: #c20010;
+  transform: scale(1.05);
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 20px 0px;
+  overflow: hidden;
+  position: relative;
+  background-image: url("/assets/images/road.png");
+  /* background-size: cover; */
+  background-size: contain;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0 -1000px;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+/* Game end screen */
+#game-end {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#game-end h1 {
+  font-size: 40px;
+  color: darkgoldenrod;
+}
+
+/* High scores panel - Game Over */
+
+#high-scores {
+  padding: 20px;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
+  background-color: #870007;
+}
+#high-scores h3 {
+  font-size: 20px;
+  color: darkgoldenrod;
+}
+
+#high-scores:hover {
+  background-color: #1f1735;
+  color: lightgray;
+  transform: scale(1.05);
+}
+
+#high-scores-ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style-position: inside; /* put nubers inside the border */
+  padding: 0;
+  margin: 0;
+}
+
+#high-scores-ol li {
+  font-family: "Orbitron", cursive;
+  font-size: 16px;
+  color: lightgray;
+  margin: 8px 0;
+}
+
+/* restart button */
+#restart-button {
+  font-size: 30px;
+  font-family: "Press Start 2P", cursive;
+  background-color: #870007;
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#restart-button:hover {
+  background-color: #c20010;
+  transform: scale(1.05);
+}
+
+/* Spinner animation */
+.spin {
+  animation: spin 0.5s;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
