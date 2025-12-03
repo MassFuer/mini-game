@@ -1,6 +1,6 @@
 # SLALOM Game | inspired by IronHack's Race Car Lab
 
-<img src="/assets/images/joker-cartoon.jpg" width="50px" alt="joker-logo">
+<img src="/assets/images/joker-cartoon.jpg" width="100px" alt="joker-logo">
 
 <details>
   <summary>
