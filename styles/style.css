@@ -135,11 +135,11 @@ main {
   font-family: "Orbitron", cursive;
 }
 .mode-key {
+  font-family: "Press Start 2P", cursive;
   display: block;
   font-size: 14px;
   color: lightgray;
   margin-top: 5px;
-  font-family: "Press Start 2P", cursive;
 }
 
 /* High scores panel - Game Intro */
@@ -181,8 +181,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 100%;
+  gap: 10px;
 }
 #game-rules h2 {
   font-size: 20px;
@@ -196,23 +195,26 @@ main {
   color: #fff;
   padding: 20px 40px;
   border-radius: 5px;
+  border: 3px solid darkgoldenrod;
   margin-top: 20px;
+  cursor: pointer;
 }
 #start-button:hover {
   background-color: #c20010;
   transform: scale(1.05);
 }
+
 #player-name {
-  font-size: 16px;
+  color: lightgray;
+  font-family: 'Press Start 2P', cursive;
   padding: 10px;
-  background-color: lightgray;
-  border: 1px solid darkgoldenrod;
+  background-color: rgb(48, 4, 40);
+  border: 3px solid darkgoldenrod;
   border-radius: 8px;
 }
 
 #intro-logo {
-  width: 180px;
-  max-width: 90%;
+  width: 190px;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
 }
@@ -327,7 +329,7 @@ main {
   color: #fff;
   border: 3px solid darkgoldenrod;
   padding: 20px 72px;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 #restart-button:hover {
