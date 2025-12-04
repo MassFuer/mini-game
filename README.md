@@ -80,12 +80,16 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 - Make the highest score
 #### Game behavior
 - You start with 3 lives, score to 0 and unlimited ammo
-- Avoid colliding with enemies, you'll lose 1 live and hear me crying (Wassup)[/assets/audio/spin.wav]
+- Avoid colliding with enemies, you'll lose 1 live and hear me crying [Wassuuuup](/assets/audio/spin.wav)
+>[!TIP]
+> I can understand if you disable sounds. Just click on the top button !
+> <img src="/assets/images/sounds.png" width="50px" alt="sounds-off">
+
 - You can 
 
 ## Game Over
 - You lost all your lives, GAME OVER !
-- ('Wassup')[https://www.youtube.com/watch?v=W16qzZ7J5YQ] audio auto plays when game is over
+- ['Wassuuuuup'][https://www.youtube.com/watch?v=W16qzZ7J5YQ] audio auto plays when game is over
 - 
 - Name and score are recorded on 
 In this final iteration, we will implement the end game screen, shown to the user when the game is over.
