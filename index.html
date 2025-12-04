@@ -52,7 +52,7 @@
           </div>
         </div>
         <div id="game-rules" style="display: none">
-          <h2>What's your name Bro ?</h2>
+          <label for="player-name">What's your name Bro ?</label>
           <input
             type="text"
             id="player-name"
@@ -64,8 +64,8 @@
             src="/assets/images/joker-cartoon.png"
             alt="joker cartoon"
           />
-          <span>Use space, left (←) and</span>
-          <span>right (→) arrows keys</span>
+          <span class="instructions">Use space to fire 🔥, left (←), right (→),</span>
+          <span class="instructions">up (↑) and down (↓) arrows to move</span>
           <img
             src="/assets/images/space_arrows.png"
             alt=""
@@ -91,11 +91,11 @@
       <!-- #game-end is initially hidden using CSS style display: none -->
       <div id="game-end">
         <h1>Game Over</h1>
-          <img
-            src="/assets/images/mask-hammer.jpg"
-            alt="mask hammer"
-            id="game-end-img"
-          />
+        <img
+          src="/assets/images/mask-hammer.jpg"
+          alt="mask hammer"
+          id="game-end-img"
+        />
         <div id="high-scores">
           <h3>Top Three Scores :</h3>
           <ol id="high-scores-ol"></ol>
