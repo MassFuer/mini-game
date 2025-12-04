@@ -7,18 +7,15 @@ class PowerUp {
         Math.floor(Math.random() * this.possibleLeftPositions.length)
       ];
     this.top = -150;
-    this.width = 65;
-    this.height = 120;
+    this.width = 40;
+    this.height = 60;
 
     // this is all for the img tag of our player
     this.element = document.createElement("img");
     this.element.style.position = "absolute";
 
     this.randomPowerUpIndex = Math.floor(Math.random() * 2);
-    this.powerUpImages = [
-      "assets/images/mush.png",
-      "assets/images/heart.png",
-    ];
+    this.powerUpImages = ["assets/images/mush.png", "assets/images/heart.png"];
     // Set power-up image
     this.element.src = this.powerUpImages[this.randomPowerUpIndex];
 
