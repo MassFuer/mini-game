@@ -14,7 +14,7 @@ body {
 
 /* Setting the body styles */
 body {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -245,13 +245,13 @@ main {
   display: none;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
-  width: 500px;
+  padding: 2px;
+  width: 496px;
 }
 #game-stats p span {
-  border: 1px solid red;
+  color: darkgoldenrod;
 }
 #game-screen {
   display: none;
@@ -332,12 +332,12 @@ main {
 
 /* restart button */
 #restart-button {
-  font-size: 30px;
+  font-size: 24px;
   font-family: "Press Start 2P", cursive;
   background-color: #870007;
   color: #fff;
   border: 3px solid darkgoldenrod;
-  padding: 20px 72px;
+  padding: 20px 71px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -371,7 +371,7 @@ main {
     color: lightgray;
   }
   50% {
-    transform: scale(1.9);
+    transform: scale(1.09);
     color: goldenrod;
   }
   100% {
