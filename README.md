@@ -1,7 +1,8 @@
 # SLALOM Game | inspired by IronHack's Race Car Lab
 
-<img src="/assets/images/tchoupi.png" width="150px" alt="tchoupi-logo">
-<img src="/assets/images/joker-cartoon.jpg" width="150px" alt="joker-logo">
+Tchoupi            |  Joker
+:-------------------------:|:-------------------------:
+<img src="/assets/images/tchoupi.png" width="150px" alt="tchoupi-logo">  |  <img src="/assets/images/joker-cartoon.jpg" width="150px" alt="joker-logo">
 
 <details>
   <summary>
