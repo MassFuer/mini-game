@@ -10,12 +10,14 @@
   </head>
   <body>
     <main>
+      <!-- Controls buttons -->
       <div id="controls">
         <button id="master-sound">What a music !</button>
         <button id="sound-toggle">🔊 Sounds ON</button>
         <button id="dark-mode-toggle">🌙</button>
       </div>
-      <!-- #game-intro is initially shown on the game start screen -->
+
+      <!-- #Game-intro is initially shown on the game start screen -->
       <div id="game-intro">
         <h1 class="game-title">
           SLALOM<span class="title-subtitle">ARMED EDITION</span>
@@ -51,6 +53,8 @@
             <ol id="high-scores-list-intro"></ol>
           </div>
         </div>
+
+        <!-- Game rules screen -->
         <div id="game-rules" style="display: none">
           <label for="player-name">What's your name Bro ?</label>
           <input
@@ -64,7 +68,9 @@
             src="/assets/images/joker-cartoon.png"
             alt="joker cartoon"
           />
-          <span class="instructions">Use space to fire 🔥, left (←), right (→),</span>
+          <span class="instructions"
+            >Use space to fire 🔥, left (←), right (→),</span
+          >
           <span class="instructions">up (↑) and down (↓) arrows to move</span>
           <img
             src="/assets/images/space_arrows.png"
@@ -77,6 +83,7 @@
         </div>
       </div>
 
+      <!-- game container -->
       <div id="game-container">
         <div id="game-stats">
           <!-- <h2 class="stats-title">Stats</h2> -->
