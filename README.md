@@ -59,11 +59,14 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 - Splash image differs from your character's choice
 - Then enter your name or surname so that the app could record your score **locally**
 
->[!NOTE] Note that it must be less thant 15 characters long
+>[!NOTE]
+>Note that it must be less thant 15 characters long
 
->[!TIP] You can user 'Enter' keyboard to launch the game
+>[!TIP]
+>You can user 'Enter' keyboard to launch the game
 
->[!CAUTION] Don't worry, your data is only stored locally on your browser !
+>[!CAUTION]
+>Don't worry, your data is only stored locally on your browser !
 
 ### 🎮 Play the Game 🎮
 #### Interacting
@@ -77,12 +80,15 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 - 
 
 ## Game Over
-- You lost all your lives
+- You lost all your lives, GAME OVER !
 - ('Wassup')[https://www.youtube.com/watch?v=W16qzZ7J5YQ] audio auto plays when game is over
 - 
 - Name and score are recorded on 
 In this final iteration, we will implement the end game screen, shown to the user when the game is over.
 
-## Additional features
+## Additional features we could go through
 - Responsive design
+- Handling number of projectiles munitions
+- Better design
+- Animations and hover effects
 - 
