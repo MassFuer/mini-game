@@ -1,5 +1,5 @@
 class Projectile {
-  constructor(gameScreen, posX, posY, gameMode = "adults") {
+  constructor(gameScreen, posX, posY, gameMode) {
     this.gameScreen = gameScreen;
     this.left = posX;
     this.top = posY;

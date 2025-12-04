@@ -34,11 +34,11 @@ class Player {
     this.top += this.directionY;
 
     // keep the player on the screen
-    if (this.left <= 40) {
-      this.left = 40;
+    if (this.left <= 10) {
+      this.left = 10;
     }
-    if (this.left + this.width >= 470) {
-      this.left = 470 - this.width;
+    if (this.left + this.width >= 500) {
+      this.left = 500 - this.width;
     }
     if (this.top <= 10) {
       this.top = 10;

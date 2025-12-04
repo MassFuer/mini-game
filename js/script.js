@@ -16,7 +16,8 @@ window.onload = function () {
   const highScoresListIntro = document.getElementById("high-scores-list-intro");
   const masterSoundButton = document.getElementById("master-sound");
   const darkModeButton = document.getElementById("dark-mode-toggle");
-  const faviconElement = document.querySelector('link[rel="icon"]')
+  const faviconElement = document.querySelector('link[rel="icon"]');
+
   // Dark mode toggle functionality
   darkModeButton.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode-toggle");
@@ -170,15 +171,27 @@ window.onload = function () {
       game.player.directionY = 4;
     }
     if (event.code === "Space") {
-      game.projectiles.push(
-        new Projectile(
-          game.gameScreen,
-          //the left of the player plus half the player width minus half the projectile width
-          game.player.left + 65 - 10,
-          game.player.top,
-          currentGameMode
-        )
-      );
+      if (currentGameMode === "kids") {
+        game.projectiles.push(
+          new Projectile(
+            game.gameScreen,
+            //the left of the player plus half the player width minus half the projectile width
+            game.player.left + 15,
+            game.player.top - 20,
+            currentGameMode
+          )
+        );
+      } else if (currentGameMode === "adults") {
+        game.projectiles.push(
+          new Projectile(
+            game.gameScreen,
+            //the left of the player plus half the player width minus half the projectile width
+            game.player.left + 15,
+            game.player.top - 35,
+            currentGameMode
+          )
+        );
+      }
       //calling the fire sound from the game class
       game.fire.play();
     }

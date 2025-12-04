@@ -115,9 +115,8 @@ class Game {
         this.lives--;
         this.livesElement.innerText = this.lives;
 
-        // adding spinning through CSS class
+        // Add spin through CSS class
         this.player.element.classList.add("spin");
-
         // remove the spin class after the spinning animation
         setTimeout(() => {
           this.player.element.classList.remove("spin");
