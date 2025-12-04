@@ -82,13 +82,16 @@ Tchoupi            |  Joker
 - 
 #### Game behavior
 - You start with score to 0 _(yes, I'm serious)_, 3 lives, and unlimited munitions
-- Avoid colliding with enemies, you'll lose 1 live, make a 360° spin and hear me crying [Wassuuuup](/assets/audio/spin.wav)
+- Avoid colliding with enemies, you'll lose 1 live, make a 360° spin and hear me crying [Wassuuuup](/assets/audio/spin.wav).
+- You got two options to avoid them :
+  - fire a projectile. If it's collide with the enemy, you'll score 1 point, enemy will disappear of the screen and you'll hear me again simulating a sonic rocket [Piou](/assets/audio/fire.wav) 😆
+  - move around enemy with the directions keys
 >[!TIP]
-> I can understand if you disable sounds. Just click on the top button !
-> <img src="/assets/images/sounds.png" width="50px" alt="sounds-off">
-- You should grab some bonuses falling from the sky. 🍄 and ♥️ will let you gain 1 more live (notice the animation in the stats menu) and hear me saying you [Good Job !](/assets/audio/1up.wav)
-- Speed Game increased by 1 every 5 score points
+> I understand if you disable sounds. Just click on the top button dedicated for that !
+> <img src="/assets/images/sounds.png" width="100px" alt="sounds-off">
+- You could also grab some bonuses falling from the sky. 🍄 and ♥️ will let you gain 1 more live (notice the animation in the stats menu) and hear me saying you [Good Job !](/assets/audio/1up.wav)
 
+>[!CAUTION]Speed Game increased by 1 every 5 score points
 
 ## 🤡 Game Over 🤬
 - You lost all your lives, GAME OVER !
