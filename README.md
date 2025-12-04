@@ -72,27 +72,27 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 ### 🎮 Play the Game 🎮
 #### Interacting
 - Use arrows ⬅️ ⬆️ ⬇️ ➡️ to move your character along the game-screen
-- Press <kbd>SPACE</kbd> to fire projectiles
+- Press <kbd>SPACE</kbd> or <kbd>CLICK</kbd> to fire projectiles
 >[!NOTE]
 > You'll notice that Tchoupi throws bananas 🍌 whereas Joker got real ammos 🔫
 #### Objectives
 - Avoid collisions with enemies
 - Make the highest score
 #### Game behavior
-- You start with 3 lives, score to 0 and unlimited ammo
-- Avoid colliding with enemies, you'll lose 1 live and hear me crying [Wassuuuup](/assets/audio/spin.wav)
+- You start with score to 0 (yes, I'm serious), 3 lives, and unlimited munitions
+- Avoid colliding with enemies, you'll lose 1 live, make a 360° spin and hear me crying [Wassuuuup](/assets/audio/spin.wav)
 >[!TIP]
 > I can understand if you disable sounds. Just click on the top button !
 > <img src="/assets/images/sounds.png" width="50px" alt="sounds-off">
+- You should grab some bonuses falling from the sky. 🍄 and ♥️ will let you gain 1 more live (notice the animation in the stats menu) and hear me saying you [Good Job !](/assets/audio/1up.wav)
+- Speed Game increased by 1 every 5 score points
 
-- You can 
-
-## Game Over
+## Game Over 🤬
 - You lost all your lives, GAME OVER !
 - ['Wassuuuuup'][https://www.youtube.com/watch?v=W16qzZ7J5YQ] audio auto plays when game is over
-- 
-- Name and score are recorded on 
-In this final iteration, we will implement the end game screen, shown to the user when the game is over.
+- Name and score are recorded locally on the browser
+  - If your score is on the top three (inside the locally stored array), you should be on screen 👍
+
 
 ## Additional features we could go through
 - Responsive design
