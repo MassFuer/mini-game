@@ -87,6 +87,16 @@ window.onload = function () {
     playerNameInput.focus();
   });
 
+    // Mode selection via keyboard
+  window.addEventListener("keydown", (event) => {
+    if (event.code === "KeyK") {
+      kidsButton.click();
+    }
+    if (event.code === "KeyA") {
+      adultsButton.click();
+    }
+  });
+
   startButton.addEventListener("click", () => {
     // Get player name from input
     playerName = playerNameInput.value.trim();
@@ -125,11 +135,13 @@ window.onload = function () {
     }
   });
 
+  // reload the page to restart the game with a click
   restartButton.addEventListener("click", () => {
     window.location.reload();
   });
-  restartButton.addEventListener("keydown", (event) => {
-    if (event.code === "Enter") {
+  // event listeners to restart game with "R" key
+  window.addEventListener("keydown", (event) => {
+    if (event.code === "KeyR") {
       window.location.reload();
     }
   });

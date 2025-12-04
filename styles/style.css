@@ -134,6 +134,13 @@ main {
   margin: 0;
   font-family: "Orbitron", cursive;
 }
+.mode-key {
+  display: block;
+  font-size: 14px;
+  color: lightgray;
+  margin-top: 5px;
+  font-family: "Press Start 2P", cursive;
+}
 
 /* High scores panel - Game Intro */
 #high-scores-intro {
