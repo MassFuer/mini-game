@@ -87,7 +87,7 @@ window.onload = function () {
     playerNameInput.focus();
   });
 
-    // Mode selection via keyboard
+  // Mode selection via keyboard
   window.addEventListener("keydown", (event) => {
     if (event.code === "KeyK") {
       kidsButton.click();
@@ -116,6 +116,11 @@ window.onload = function () {
       startButton.click();
     }
   });
+  // window.addEventListener("keydown", (event) => {
+  //   if (event.code === "Enter") {
+  //     startButton.click();
+  //   }
+  // });
 
   // Sound toggle button
   soundToggle.addEventListener("click", () => {
@@ -142,7 +147,7 @@ window.onload = function () {
   // event listeners to restart game with "R" key
   window.addEventListener("keydown", (event) => {
     if (event.code === "KeyR") {
-      window.location.reload();
+      restartButton.click();
     }
   });
 
