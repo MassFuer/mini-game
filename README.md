@@ -46,6 +46,9 @@ Tchoupi            |  Joker
 - Music : [Stereoclip ©](https://open.spotify.com/intl-fr/album/6A9MVcSN5s7142HgCZUQKS)
 
 ## Getting Started
+### Setup Instructions
+- <kbd>Git clone</kbd> the repo from url : https://github.com/MassFuer/mini-game.git
+- Open "index.html" in your favorite browser or with LiveServer on VSCode.
 ### General Controls
 - You can access controls buttons on top of the screen during all your game experience, they let you :
   - Play / Stop a music
