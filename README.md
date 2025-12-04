@@ -1,5 +1,6 @@
 # SLALOM Game | inspired by IronHack's Race Car Lab
 
+<img src="/assets/images/tchoupi.png" width="150px" alt="tchoupi-logo">
 <img src="/assets/images/joker-cartoon.jpg" width="150px" alt="joker-logo">
 
 <details>
@@ -18,7 +19,7 @@
 
 ## Requirements from IronHack
 ### Instructions
--Implement simple game logic and UI, including start screen, game screen, and end-game screen.
+- Implement simple game logic and UI, including start screen, game screen, and end-game screen.
 - Use best practices learnt during lessons
 - Single page / Single HTML
 - At least 3 stats (splash, game, gameover)
@@ -72,12 +73,15 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 #### Interacting
 - Use arrows ⬅️ ⬆️ ⬇️ ➡️ to move your character along the game-screen
 - Press <kbd>SPACE</kbd> to fire projectiles
+>[!NOTE]
+> You'll notice that Tchoupi throws bananas 🍌 whereas Joker got real ammos 🔫
 #### Objectives
+- Avoid collisions with enemies
 - Make the highest score
 #### Game behavior
 - You start with 3 lives, score to 0 and unlimited ammo
-- Avoid colliding with enemies, you'll lose 1 live
-- 
+- Avoid colliding with enemies, you'll lose 1 live and hear me crying (Wassup)[/assets/audio/spin.wav]
+- You can 
 
 ## Game Over
 - You lost all your lives, GAME OVER !
