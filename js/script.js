@@ -16,7 +16,7 @@ window.onload = function () {
   const highScoresListIntro = document.getElementById("high-scores-list-intro");
   const masterSoundButton = document.getElementById("master-sound");
   const darkModeButton = document.getElementById("dark-mode-toggle");
-
+  const faviconElement = document.querySelector('link[rel="icon"]')
   // Dark mode toggle functionality
   darkModeButton.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode-toggle");
@@ -69,6 +69,7 @@ window.onload = function () {
     currentGameMode = "kids";
     introLogo.src = "assets/images/tchoupi.png";
     document.title = "Tchoupi : Slalom Edition";
+    faviconElement.href = "assets/images/tchoupi.ico";
     gameTitle.innerHTML =
       'TCHOUPI BANANAS<span class="title-subtitle">KIDS EDITION</span>';
     modeSelection.style.display = "none";
@@ -80,6 +81,7 @@ window.onload = function () {
     currentGameMode = "adults";
     introLogo.src = "assets/images/joker-cartoon.jpg";
     document.title = "Joker : Slalom Edition";
+    faviconElement.href = "assets/images/joker.ico";
     document.querySelector(".game-title").innerHTML =
       'JOKER SLALOM<span class="title-subtitle">ARMED EDITION</span>';
     modeSelection.style.display = "none";
