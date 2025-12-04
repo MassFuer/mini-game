@@ -27,7 +27,7 @@ Tchoupi            |  Joker
 - Create and manipulate elements in the DOM, including displaying and hiding elements.
 - Change the style of the game elements using DOM and CSS
   <br>
-<h3>Technologies/h3>
+  <h3>Technologies</h3>
 - Basic HTML, CSS, JS
 - JavaScript ( DOM, Basic JS, Classes)
 - Win/Lose Logic
