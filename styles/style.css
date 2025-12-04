@@ -235,11 +235,9 @@ main {
 #high-scores-list-intro li:nth-child(1)::before {
   content: "🥇 ";
 }
-
 #high-scores-list-intro li:nth-child(2)::before {
   content: "🥈 ";
 }
-
 #high-scores-list-intro li:nth-child(3)::before {
   content: "🥉 ";
 }
@@ -334,13 +332,16 @@ main {
   display: none;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
   padding: 2px;
   width: 496px;
 }
+
 #game-stats p span {
-  color: darkgoldenrod;
+  color: gold;
+  height: 16px;
 }
 #game-screen {
   display: none;
@@ -351,6 +352,8 @@ main {
   background-size: cover;
   background-size: contain;
   animation: slide 5s linear infinite;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
 }
 
 @keyframes slide {
@@ -449,7 +452,7 @@ main {
   }
 }
 
-/* Pulse animation for power-ups */
+/* live animations on game stats (power-ups, live decreased, speed increase */
 .pulse {
   animation: pulse 0.5s;
 }
@@ -461,7 +464,7 @@ main {
   }
   50% {
     transform: scale(1.09);
-    color: goldenrod;
+    color: greenyellow;
   }
   100% {
     transform: scale(1);

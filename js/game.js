@@ -132,8 +132,18 @@ class Game {
         // Increase the score by 1
         this.score++;
         this.scoreElement.innerText = this.score;
+        // add animation on stats dashboard when score increase (obstacle passed the bottom)
+        this.scoreElement.classList.add("pulse");
+        setTimeout(() => {
+          this.scoreElement.classList.remove("pulse");
+        }, 500);
         // Update speed display
         this.speedElement.innerText = this.getObstacleSpeed();
+        // add animation on stats dashboard when speed increase (every 5 points)
+        this.speedElement.classList.add("pulse");
+        setTimeout(() => {
+          this.speedElement.classList.remove("pulse");
+        }, 500);
       }
 
       // Check for collisions with projectiles
@@ -158,6 +168,11 @@ class Game {
           //add one point to the score
           this.score++;
           this.scoreElement.innerText = this.score;
+          // add animation on stats dashboard when score increase (well shot projectile)
+          this.scoreElement.classList.add("pulse");
+          setTimeout(() => {
+            this.scoreElement.classList.remove("pulse");
+          }, 500);
           // update speed display
           this.speedElement.innerText = this.getObstacleSpeed().toFixed(1);
         } else if (currentProjectile.top < 0) {
@@ -191,7 +206,7 @@ class Game {
         this.lives++;
         this.livesElement.innerText = this.lives;
 
-        // Visual feedback added - pulse the lives counter
+        // Animation added on the stats dashboard when live increase
         this.livesElement.classList.add("pulse");
         setTimeout(() => {
           this.livesElement.classList.remove("pulse");
