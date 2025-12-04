@@ -9,8 +9,8 @@ class Obstacle {
         Math.floor(Math.random() * this.possibleLeftPositions.length)
       ];
     this.top = -300;
-    this.width = 130;
-    this.height = 240;
+    this.width = 100;
+    this.height = 180;
 
     // this is all for the img tag of our player
     this.element = document.createElement("img");
