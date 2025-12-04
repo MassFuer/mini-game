@@ -1,4 +1,4 @@
-# SLALOM Game | inspired by IronHack's Race Car Lab
+# 🕹️ SLALOM Game 🕹️ | inspired by IronHack's Race Car Lab
 
 Tchoupi            |  Joker
 :-------------------------:|:-------------------------:
@@ -38,19 +38,15 @@ Tchoupi            |  Joker
 - Version control tool (Git/Github)
 - Bonus: Local Storage, Audio.
 
-## Introduction
-In this exercise, we will create a **Slalom : Armed Edition** game using DOM manipulation, classes, and object-oriented programming (OOP).
-
+## Introduction to my 🌈 **Slalom Game : Armed Edition** 🌈
 ### Getting Started
-
-
 #### Game-Intro
-- First choose your character depending on your age / mood / personal preferences
-- You should see below the characters a recap of the top three scores recorded on the browser Local Storage
+- First, choose your character depending on your age / mood / personal preferences
+- If you've already played the game on your browser, you should see below the characters a recap of the top three scores recorded on the browser Local Storage
 - Try hover them, some effects were added
-- You will see controls button on the top during all your experience, they let you :
+- You can access controls buttons on top of the screen during all your experience, they let you :
   - play a music, credit goes to [Stereoclip ©](https://open.spotify.com/intl-fr/album/6A9MVcSN5s7142HgCZUQKS)
-  - Enable / Disable sounds during the game
+  - Enable / Disable sounds effects during the game
   - Enable / Disable dark-mode
 - Fonts chosen from [Google Fonts](https://fonts.google.com/) :
   - Press Start 2P
@@ -76,11 +72,10 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 - Press <kbd>SPACE</kbd> or <kbd>CLICK</kbd> to fire projectiles
 >[!NOTE]
 > You'll notice that Tchoupi throws bananas 🍌 whereas Joker got real ammos 🔫
-#### Objectives
-- Avoid collisions with enemies
-- Make the highest score
+#### Objective
+- Make the highest score and share it with your friends 🤝
 #### Game behavior
-- You start with score to 0 (yes, I'm serious), 3 lives, and unlimited munitions
+- You start with score to 0 _(yes, I'm serious)_, 3 lives, and unlimited munitions
 - Avoid colliding with enemies, you'll lose 1 live, make a 360° spin and hear me crying [Wassuuuup](/assets/audio/spin.wav)
 >[!TIP]
 > I can understand if you disable sounds. Just click on the top button !
@@ -88,12 +83,13 @@ In this exercise, we will create a **Slalom : Armed Edition** game using DOM man
 - You should grab some bonuses falling from the sky. 🍄 and ♥️ will let you gain 1 more live (notice the animation in the stats menu) and hear me saying you [Good Job !](/assets/audio/1up.wav)
 - Speed Game increased by 1 every 5 score points
 
-## Game Over 🤬
+## 🤡 Game Over 🤬
 - You lost all your lives, GAME OVER !
-- ['Wassuuuuup'][https://www.youtube.com/watch?v=W16qzZ7J5YQ] audio auto plays when game is over
+- A sample of the famous ad ['Wassuuuuup'][https://www.youtube.com/watch?v=W16qzZ7J5YQ] audio auto plays when game is over [Wazzzssaauuuup !](/assets/audio/wassup-2.wav)
+- Image displayed depends on the character you chose
 - Name and score are recorded locally on the browser
-  - If your score is on the top three (inside the locally stored array), you should be on screen 👍
-
+- Top Three scores is displayed as a recap
+  - If your score is on the top three (inside the locally stored array), you should be on screen, good job ! 👍
 
 ## Additional features we could go through
 - Responsive design
