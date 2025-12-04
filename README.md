@@ -8,6 +8,7 @@ Tchoupi            |  Joker
   <summary>
    <h2>IronHack's Scope</h2>
   </summary>
+
 - Practice and consolidate what we've learnt during these 3 first weeks.
 - Practice and consolidate what we've learnt during these 3 first weeks.
 - Create a simple 2d game using HTML, CSS, JavaScript, and DOM manipulation.
@@ -34,6 +35,7 @@ Tchoupi            |  Joker
 - Version control tool (Git/Github)
 - Bonus: Local Storage, Audio.
   <hr>
+
 </details>
 
 # 🌈 **Slalom Game : Armed Edition** 🌈
