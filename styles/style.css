@@ -274,6 +274,12 @@ main {
   font-size: 40px;
   color: darkgoldenrod;
 }
+.game-end-img {
+  width: 450px;
+  margin: 10px auto;
+  border: 3px solid darkgoldenrod;
+  border-radius: 8px;
+}
 
 /* High scores panel - Game Over */
 

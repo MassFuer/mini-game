@@ -132,16 +132,16 @@ window.onload = function () {
   window.addEventListener("keydown", (event) => {
     console.log("a key was pressed", event);
     if (event.code === "ArrowLeft") {
-      game.player.directionX = -2;
+      game.player.directionX = -4;
     }
     if (event.code === "ArrowRight") {
-      game.player.directionX = 2;
+      game.player.directionX = 4;
     }
     if (event.code === "ArrowUp") {
-      game.player.directionY = -2;
+      game.player.directionY = -4;
     }
     if (event.code === "ArrowDown") {
-      game.player.directionY = 2;
+      game.player.directionY = 4;
     }
     if (event.code === "Space") {
       game.projectiles.push(
