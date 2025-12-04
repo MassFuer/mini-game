@@ -9,7 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -60,11 +60,11 @@ main {
 
 /* Game Intro Style with title and subtitle, modes selection, hidden div and stats */
 #game-intro {
+  /* border: 3px solid darkgoldenrod; */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  /* width: 100%; */
 }
 
 .game-intro p {
@@ -80,7 +80,7 @@ main {
 }
 .title-subtitle {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   color: darkgoldenrod;
 }
 
