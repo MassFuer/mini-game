@@ -246,6 +246,7 @@ class Game {
   // Game over screen and displaying high scores
   gameOver() {
     console.log("Game is Over Man");
+    // play sound after 1s to not overlap with collision sound
     setTimeout(() => this.wassupGameOver.play(), 1000);
     this.gameScreen.style.display = "none";
     this.endScreen.style.display = "flex";

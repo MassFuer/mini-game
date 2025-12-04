@@ -34,11 +34,10 @@ main {
   justify-content: center;
 }
 
-/* Div controls (master sound and dark mode) */
+/* button controls (master sound and dark mode) */
 #controls {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   gap: 10px;
 }
 #controls button {
@@ -64,9 +63,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 20px 0px;
+  /* width: 100%; */
+  height: 100vh;
 }
 
 .game-intro p {
@@ -137,13 +135,6 @@ main {
   font-family: "Orbitron", cursive;
 }
 
-.logo-img {
-  width: 250px;
-  margin: 10px auto;
-  border: 3px solid darkgoldenrod;
-  border-radius: 8px;
-}
-
 /* High scores panel - Game Intro */
 #high-scores-intro {
   margin-top: 30px;
@@ -181,14 +172,16 @@ main {
 #game-rules {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  /* gap: 10px; */
+  gap: 5px;
+  width: 100%;
 }
 #game-rules h2 {
   font-size: 20px;
   color: rgb(147, 151, 147);
 }
+
 #start-button {
   font-size: 18px;
   font-family: "Press Start 2P", cursive;
@@ -211,13 +204,15 @@ main {
 }
 
 #intro-logo {
-  width: 250px;
+  width: 180px;
+  max-width: 90%;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
 }
 
 .arrows-img {
-  width: 150px;
+  width: 120px;
+  max-width: 80%;
 }
 
 #game-container {
@@ -275,7 +270,7 @@ main {
   color: darkgoldenrod;
 }
 .game-end-img {
-  width: 450px;
+  width: 10px;
   margin: 10px auto;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
@@ -284,13 +279,13 @@ main {
 /* High scores panel - Game Over */
 
 #high-scores {
-  padding: 20px;
+  padding: 15px;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
   background-color: #870007;
 }
 #high-scores h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: darkgoldenrod;
 }
 
@@ -323,7 +318,8 @@ main {
   font-family: "Press Start 2P", cursive;
   background-color: #870007;
   color: #fff;
-  padding: 20px 40px;
+  border: 3px solid darkgoldenrod;
+  padding: 20px 72px;
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -346,7 +342,7 @@ main {
   }
 }
 
-/* Pulse animation for power-up collection */
+/* Pulse animation for power-ups */
 .pulse {
   animation: pulse 0.5s;
 }

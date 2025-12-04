@@ -128,6 +128,11 @@ window.onload = function () {
   restartButton.addEventListener("click", () => {
     window.location.reload();
   });
+  restartButton.addEventListener("keydown", (event) => {
+    if (event.code === "Enter") {
+      window.location.reload();
+    }
+  });
 
   window.addEventListener("keydown", (event) => {
     console.log("a key was pressed", event);
