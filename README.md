@@ -8,18 +8,14 @@ Tchoupi            |  Joker
   <summary>
    <h2>IronHack's Scope</h2>
   </summary>
-  - Practice and consolidate what we've learnt during these 3 first weeks.
-  - Practice and consolidate what we've learnt during these 3 first weeks.
-  - Create a simple 2d game using HTML, CSS, JavaScript, and DOM manipulation.
-  - Learn by failing
-  - Bring our personal insight into our projects
-  - Advance our technical skills in HTML, CSS, JS.
+- Practice and consolidate what we've learnt during these 3 first weeks.
+- Practice and consolidate what we've learnt during these 3 first weeks.
+- Create a simple 2d game using HTML, CSS, JavaScript, and DOM manipulation.
+- Learn by failing
+- Bring our personal insight into our projects
+- Advance our technical skills in HTML, CSS, JS.
   <br>
-  <hr>
-</details>
-
-## Requirements from IronHack
-### Instructions
+  <h3>Instructions</h3>
 - Implement simple game logic and UI, including start screen, game screen, and end-game screen.
 - Use best practices learnt during lessons
 - Single page / Single HTML
@@ -30,33 +26,35 @@ Tchoupi            |  Joker
 - Create and display randomly generated obstacles to add complexity to the game.
 - Create and manipulate elements in the DOM, including displaying and hiding elements.
 - Change the style of the game elements using DOM and CSS
-
-### Technologies
+  <br>
+<h3>Technologies/h3>
 - Basic HTML, CSS, JS
 - JavaScript ( DOM, Basic JS, Classes)
 - Win/Lose Logic
 - Version control tool (Git/Github)
 - Bonus: Local Storage, Audio.
+  <hr>
+</details>
 
-## Introduction to my 🌈 **Slalom Game : Armed Edition** 🌈
+# 🌈 **Slalom Game : Armed Edition** 🌈
 
-### Credits
+## Credits
 - Fonts "Press Start 2P" and "Orbitron" : [Google Fonts](https://fonts.google.com/)
 - Audio recorded from mic : [Audacity](https://www.audacityteam.org/)
 - Music : [Stereoclip ©](https://open.spotify.com/intl-fr/album/6A9MVcSN5s7142HgCZUQKS)
 
-### Getting Started
-#### General Controls
+## Getting Started
+### General Controls
 - You can access controls buttons on top of the screen during all your game experience, they let you :
   - Play / Stop a music
   - Enable / Disable sounds effects during the game
   - Enable / Disable dark-mode
-#### Game-Intro
+### Game-Intro
 - First, choose your character depending on your age / mood / personal preferences
 - If you've already played the game on your browser, you should see below the characters a recap of the top three scores recorded on the browser Local Storage
   - Try hover them, some effects were added
 
-## Game-Rules
+### Game-Rules
 - HTML and Game-Rules' pages titles are set depending on the character you chose
 - Splash image differs from your character's choice
 - Enter your name or pseudo so that the app could record your score **locally**
@@ -70,17 +68,16 @@ Tchoupi            |  Joker
 >[!CAUTION]
 >Don't worry, your data is only stored locally on your browser !
 
-### 🎮 Play the Game 🎮
-#### Interacting
+## 🎮 Play the Game 🎮
+### Interacting
 - Use arrows ⬅️ ⬆️ ⬇️ ➡️ to move your character along the game-screen
 - Press <kbd>SPACE</kbd> or <kbd>CLICK</kbd> to fire projectiles
 >[!NOTE]
 > You'll notice that Tchoupi throws bananas 🍌 whereas Joker got real ammos 🔫
 > 
-#### Objective
+### Objective
 - Make the highest score and share it with your friends 🤝
-- 
-#### Game behavior
+### Game behavior
 - You start with score to 0 _(yes, I'm serious)_, 3 lives, and unlimited munitions
 - Avoid colliding with enemies, you'll lose 1 live, make a 360° spin and hear me crying [Wassuuuup](/assets/audio/spin.wav).
 - You got two options to avoid them :
@@ -91,24 +88,21 @@ Tchoupi            |  Joker
 > <img src="/assets/images/sounds.png" width="100px" alt="sounds-off">
 - You could also grab some bonuses falling from the sky. 🍄 and ♥️ will let you gain 1 more live (notice the animation in the stats menu) and hear me saying you [Good Job !](/assets/audio/1up.wav)
 
->[!CAUTION]Speed Game increased by 1 every 5 score points
+>[!CAUTION]
+Speed Game increased by 1 every 5 score points
 
-## 🤡 Game Over 🤬
+### 🤡 Game Over 🤬
 - You lost all your lives, GAME OVER !
-- A sample of the famous ad ['Wassuuuuup'](https://www.youtube.com/watch?v=W16qzZ7J5YQ) audio auto plays when game is over [Wazzzssaauuuup !](/assets/audio/wassup-2.wav)
-- Image displayed depends on the character you chose
+- A sample of the famous ad ['Wassuuuuup'](https://www.youtube.com/watch?v=W16qzZ7J5YQ) audio auto plays when game ends.
+- Image displayed in the Game End screen depends on the character you chose
 - Name and score are recorded locally on the browser
-- Top Three scores is displayed as a recap
+- Top Three scores are displayed as a recap
   - If your score is on the top three (inside the locally stored array), you should be on screen, good job ! 👍
-
 
 ## Additional features we could go through
 - Responsive design
 - Handling number of projectiles munitions
 - Better design
-- Animations and hover effects
+- Animations when enemy shooted, highscore reached, combo executed (get 1 life when 3 points scored in a row, change background over time, etc), etc.
+- Hover effects and animations in the game intro and game end screens
 - Feature to pause the game
-- "Combo" features (if 3 enemies targetted in a row, get 1 life or change background or ...)
-- Make something when new Highscore is reached
-- Animation on collision
-- 
