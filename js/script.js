@@ -89,10 +89,12 @@ window.onload = function () {
 
   // Mode selection via keyboard
   window.addEventListener("keydown", (event) => {
-    if (event.code === "KeyK") {
+    // Only work if not typing in an input field
+    if (event.code === "KeyK" && event.target.tagName !== "INPUT") {
+      event.preventDefault();
       kidsButton.click();
-    }
-    if (event.code === "KeyA") {
+    } else if (event.code === "KeyJ" && event.target.tagName !== "INPUT") {
+      event.preventDefault();
       adultsButton.click();
     }
   });
@@ -182,17 +184,19 @@ window.onload = function () {
 
   // add click event listener to fire projectiles
   window.addEventListener("click", (event) => {
-    game.projectiles.push(
-      new Projectile(
-        game.gameScreen,
-        //the left of the player plus half the player width minus half the projectile width
-        game.player.left + 65 - 10,
-        game.player.top,
-        currentGameMode
-      )
-    );
-    //calling the fire sound from the game class
-    game.fire.play();
+    if (event.target.tagName !== "BUTTON") {
+      game.projectiles.push(
+        new Projectile(
+          game.gameScreen,
+          //the left of the player plus half the player width minus half the projectile width
+          game.player.left + 65 - 10,
+          game.player.top,
+          currentGameMode
+        )
+      );
+      //calling the fire sound from the game class
+      game.fire.play();
+    }
   });
 
   window.addEventListener("keyup", (event) => {
