@@ -79,11 +79,26 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  font-size: 36px;
+  text-shadow: 3px 3px 0 #870007, 6px 6px 0 rgba(0, 0, 0, 0.5);
+  animation: titleFloat 3s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+@keyframes titleFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .title-subtitle {
   display: block;
   font-size: 18px;
   color: darkgoldenrod;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
 }
 
 /* Mode Selection Styles */
@@ -92,18 +107,34 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 #mode-selection h2 {
   font-size: 24px;
-  color: lightgreen;
+  color: darkgoldenrod;
+  text-shadow: 2px 2px 8px rgba(184, 134, 11, 0.5);
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 2px 2px 8px rgba(184, 134, 11, 0.5);
+  }
+  50% {
+    text-shadow: 2px 2px 20px rgba(184, 134, 11, 1);
+  }
 }
 
 .mode-buttons {
   display: flex;
   gap: 15px;
   justify-content: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .mode-btn {
@@ -128,6 +159,13 @@ main {
   width: 150px;
   height: 150px;
   object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.mode-btn:hover .mode-img {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 8px 16px rgba(255, 215, 0, 0.6));
 }
 
 .mode-btn p {
@@ -135,18 +173,26 @@ main {
   color: #fff;
   margin: 0;
   font-family: "Orbitron", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .mode-key {
   font-family: "Press Start 2P", cursive;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   color: lightgray;
-  margin-top: 5px;
+  margin-top: 10px;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.mode-key kbd {
+  color: darkgoldenrod;
+  font-weight: bold;
 }
 
 /* High scores panel - Game Intro */
 #high-scores-intro {
-  margin-top: 30px;
+  margin-top: 15px;
   padding: 20px;
   border: 3px solid darkgoldenrod;
   border-radius: 8px;
@@ -156,7 +202,7 @@ main {
 #high-scores-intro:hover {
   background-color: #1f1735;
   color: lightgray;
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 #high-scores-intro h3 {
   font-size: 20px;
@@ -175,6 +221,27 @@ main {
   font-size: 16px;
   color: lightgray;
   margin: 8px 0;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+#high-scores-list-intro li:hover {
+  background: black;
+  color: darkgoldenrod;
+  transform: translateX(15px);
+}
+/* Trophy icons for top 3 */
+#high-scores-list-intro li:nth-child(1)::before {
+  content: "🥇 ";
+}
+
+#high-scores-list-intro li:nth-child(2)::before {
+  content: "🥈 ";
+}
+
+#high-scores-list-intro li:nth-child(3)::before {
+  content: "🥉 ";
 }
 
 /* Game rules */
@@ -237,7 +304,6 @@ main {
   padding: 20px 40px;
   border-radius: 8px;
   border: 3px solid darkgoldenrod;
-  margin-top: 20px;
   cursor: pointer;
   animation: buttonPulse 1.5s infinite;
 }
