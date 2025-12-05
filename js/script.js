@@ -135,7 +135,7 @@ window.onload = function () {
       game.boom.volume = 0.1;
       game.fire.volume = 0.1;
       game.collision.volume = 0.1;
-      game.powerUpSound.volume = 0.2;
+      game.powerUpSound.volume = 0.1;
     } else {
       soundToggle.innerText = "🔇 Sound OFF";
       game.boom.volume = 0;
@@ -144,7 +144,7 @@ window.onload = function () {
       game.powerUpSound.volume = 0;
     }
   });
-
+  // Restart Button Events listeners
   // reload the page to restart the game with a click
   restartButton.addEventListener("click", () => {
     window.location.reload();
@@ -156,6 +156,7 @@ window.onload = function () {
     }
   });
 
+  // Game Events Listeners
   window.addEventListener("keydown", (event) => {
     console.log("a key was pressed", event);
     if (event.code === "ArrowLeft") {
@@ -170,6 +171,7 @@ window.onload = function () {
     if (event.code === "ArrowDown") {
       game.player.directionY = 4;
     }
+    // handling which projectile is created depending on selected mode
     if (event.code === "Space") {
       if (currentGameMode === "kids") {
         game.projectiles.push(

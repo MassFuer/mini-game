@@ -43,18 +43,19 @@ class Game {
     this.frames = 0;
 
     // adding sounds
+    // enemy shot
     this.boom = new Audio("assets/audio/boom.wav");
     this.boom.volume = 0.1;
-
+    // projectile shot
     this.fire = new Audio("assets/audio/fire.wav");
     this.fire.volume = 0.1;
-
+    // player collided with enemy
     this.collision = new Audio("assets/audio/spin.wav");
     this.collision.volume = 0.1;
-
+    // player grab a powerup
     this.powerUpSound = new Audio("assets/audio/1up.wav");
     this.powerUpSound.volume = 0.1;
-
+    // game over (bonus)
     this.wassupGameOver = new Audio("assets/audio/wassup-2.wav");
     this.wassupGameOver.volume = 0.1;
   }
