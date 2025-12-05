@@ -68,7 +68,7 @@ Tchoupi            |  Joker
 >Note that it must be less thant 15 characters long
 
 >[!TIP]
->You can user 'Enter' keyboard to launch the game
+>You can use 'Enter' keyboard to launch the game
 
 >[!CAUTION]
 >Don't worry, your data is only stored locally on your browser !
@@ -86,7 +86,7 @@ Tchoupi            |  Joker
 - You start with score to 0 _(yes, I'm serious)_, 3 lives, and unlimited munitions
 - Avoid colliding with enemies, you'll lose 1 live, make a 360° spin and hear me crying [Wassuuuup](/assets/audio/spin.wav).
 - You got two options to avoid them :
-  - fire a projectile. If it's collide with the enemy, you'll score 1 point, enemy will disappear of the screen and you'll hear me again simulating a sonic rocket [Piou](/assets/audio/fire.wav) 😆
+  - fire a projectile and hear me again simulating a sonic rocket [Piou](/assets/audio/fire.wav) 😆. If it's collide with the enemy, you'll score 1 point, hear a (_satisfying_) [Boom shaka](/assets/audio/boom.wav), enemy will disappear on screen and you can keep going on targeting high score leaderboard
   - move around enemy with the directions keys
 >[!TIP]
 > I understand if you disable sounds. Just click on the top button dedicated for that !
@@ -107,7 +107,6 @@ Speed Game increased by 1 every 5 score points
 ## Additional features we could go through
 - Responsive design
 - Handling number of projectiles munitions
-- Better design
+- Improve design
 - Animations when enemy shooted, highscore reached, combo executed (get 1 life when 3 points scored in a row, change background over time, etc), etc.
-- Hover effects and animations in the game intro and game end screens
 - Feature to pause the game
